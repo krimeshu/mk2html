@@ -1,0 +1,33 @@
+{
+  "name": "mk2html",
+  "version": "1.0.0",
+  "description": "Transform your markdown into html for sharing or archiving. From your script, cli or shortcut.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test"
+  },
+  "bin": {
+    "mk2html": "bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krimeshu/mk2html.git"
+  },
+  "keywords": [
+    "markdown",
+    "parse",
+    "html"
+  ],
+  "author": "krimeshu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krimeshu/mk2html/issues"
+  },
+  "homepage": "https://github.com/krimeshu/mk2html#readme",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.1.0",
+    "marked": "^0.3.6"
+  }
+}
