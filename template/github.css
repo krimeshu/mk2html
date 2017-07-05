@@ -639,6 +639,7 @@
 }
 
 .markdown-body .highlight pre,
+.content-area .markdown-body pre,
 .markdown-body pre {
   padding: 16px;
   overflow: auto;

@@ -25,6 +25,16 @@ mk2html test/test.md
 mk2html test/test.md -t     # Generate toc
 ```
 
+## Shortcut
+
+In Windows, you can create a `DROP-MD-HERE.bat` on desktop, with it's content:
+
+```bash
+@echo off
+mk2html -t %* && pause 
+```
+Then just drop your `*.md` files on it, and see what will happen.
+
 ## API
 
 ```javascript
