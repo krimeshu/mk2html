@@ -40,7 +40,7 @@ Then just drop your `*.md` files on it, and see what will happen.
 ```javascript
 var mk2html = require('mk2html');
 
-mk2html(_dirname + '/test/test.md', {
+mk2html(__dirname + '/test/test.md', {
     toc: true               // Generate toc
 });
 ```
