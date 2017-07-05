@@ -3,7 +3,8 @@ var fs = require('fs'),
 
 var marked = require('marked'),
     JSDOM = require('jsdom').JSDOM,
-    jquery = require('jquery');
+    jquery = require('jquery'),
+    pinyinlite = require('pinyinlite');
 
 var templateString = null;
 
@@ -141,13 +142,40 @@ function generateToc($) {
     $('h1,h2,h3,h4,h5,h6').each(function () {
         var $this = $(this),
             text = $this.text(),
-            id = $this.prop('id'),
             tagName = $this.prop('tagName');
+        // 生成 id
+        var pinyinArr = pinyinlite(text),
+            tmp = [];
+        pinyinArr.forEach(function (pinyins, idx) {
+            var pinyin = pinyins[0];
+            if (pinyin) {
+                if (tmp.length && text.charCodeAt(idx) >= 128) {
+                    tmp.push('-');
+                }
+                tmp.push(pinyin);
+            } else {
+                var code = text.charCodeAt(idx);
+                if (code == 32) {
+                    tmp.push('-');
+                } else {
+                    tmp.push('-u' + code);
+                }
+            }
+        });
+        var id = 'title_' + tmp.join(''),
+            idx = 1;
         // 检测 id 冲突
-        if(exitsId[id]) {
-            
+        if (exitsId[id]) {
+            var idx = 0,
+                newId;
+            do {
+                idx++;
+                newId = id + '-' + idx;
+            } while (exitsId[newId]);
+            id = newId;
         }
         exitsId[id] = true;
+        $this.attr('id', id);
         // 创建目录链接
         var $item = $(tocItemTpl).text(text).attr('href', '#' + id);
         // console.log('tagName:', tagName);

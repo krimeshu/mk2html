@@ -1,6 +1,6 @@
 {
   "name": "mk2html",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Transform your markdown into html for sharing or archiving. From your script, cli or shortcut.",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,7 @@
     "commander": "^2.11.0",
     "jquery": "^3.2.1",
     "jsdom": "^11.1.0",
-    "marked": "^0.3.6"
+    "marked": "^0.3.6",
+    "pinyinlite": "^1.2.0"
   }
 }
