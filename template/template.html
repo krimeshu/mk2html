@@ -7,15 +7,30 @@
     <title>
         ${title}
     </title>
+    <link rel="stylesheet" href="frame.css" inline />
     <link rel="stylesheet" href="github.css" inline />
-    <link rel="stylesheet" href="prism/prism.css" inline />
+    <link rel="stylesheet" href="prism/prism.css" inline /> 
     ${style}
 </head>
 
-<body>
-    <article class="markdown-body">
-        ${content}
-    </article>
+<body class="without-toc">
+    <script type="text/template" id="tpl_tocArea">
+        <aside class="toc-area">
+            <div class="toc-inner"></div>
+        </aside>
+    </script>
+    <script type="text/template" id="tpl_tocList">
+        <div class="toc-list">
+        </div>
+    </script>
+    <script type="text/template" id="tpl_tocItem">
+        <a class="toc-item"></a>
+    </script>
+    <section class="content-area">
+        <article class="markdown-body">
+            ${content}
+        </article>
+    </section>
     <script src="prism/prism.js" inline></script>
 </body>
 

@@ -1,0 +1,67 @@
+body {
+    background: #fdfdfd;
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif !important;
+}
+
+.content-area {
+    text-align: center;
+}
+
+.markdown-body {
+    text-align: left;
+    width: 900px;
+    min-width: 900px;
+    max-width: 900px;
+    margin: 16px auto;
+    padding: 80px 80px;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+}
+
+.with-toc {
+    padding-left: 340px;
+}
+
+.toc-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 340px;
+    bottom: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #f8f8f8;
+}
+
+.toc-inner {
+    margin: 20px 0 20px 0;
+}
+
+.toc-list {
+    display: block;
+    margin: 0;
+    padding-left: 16px;
+}
+
+.toc-item {
+    font-size: 14px;
+    line-height: 18px;
+    color: #364149;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: 0.2px;
+    display: block;
+    text-decoration: none !important;
+    background: none !important;
+    border-width: 0px !important;
+    border-style: initial !important;
+    border-color: initial !important;
+    border-image: initial !important;
+    padding: 8px 12px !important;
+}
+
+.toc-item {
+    text-decoration: underline;
+}

@@ -64,13 +64,13 @@ What about some code **in** a list? That's insane, right?
 1. In Ruby you can map like this:
 
 ```ruby
-        ['a', 'b'].map { |x| x.uppercase }
+    ['a', 'b'].map { |x| x.uppercase }
 ```
 
 2. In Rails, you can do a shortcut:
 
 ```ruby
-        ['a', 'b'].map(&:uppercase)
+    ['a', 'b'].map(&:uppercase)
 ```
 
 Some people seem to like definition lists
@@ -97,9 +97,11 @@ You see, that was formatted as code because it's been indented by four spaces.
 
 How about we throw some angle braces and ampersands in there?
 
+```html
     <div class="footer">
         &copy; 2004 Foo Corporation
     </div>
+```
 
 Set in stone
 ------------
