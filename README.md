@@ -3,6 +3,14 @@ Transform your markdown into html for sharing or archiving. From your script, cl
 
 ## Install
 
+Install from npm.
+
+```bash
+npm install mk2html
+```
+
+Install from git.
+
 ```bash
 git clone https://github.com/krimeshu/mk2html.git
 cd mk2html
