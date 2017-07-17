@@ -23,6 +23,7 @@ npm link
 ```bash
 mk2html test/test.md
 mk2html test/test.md -t     # Generate toc
+mk2html test/test.md -i     # Parse image into inline dataUri string
 ```
 
 ## Shortcut
@@ -31,7 +32,7 @@ In Windows, you can create a `DROP-MD-HERE.bat` on desktop, with it's content:
 
 ```bash
 @echo off
-mk2html -t %* && pause 
+mk2html -t -i %* && pause 
 ```
 Then just drop your `*.md` files on it, and see what will happen.
 
@@ -41,6 +42,7 @@ Then just drop your `*.md` files on it, and see what will happen.
 var mk2html = require('mk2html');
 
 mk2html(__dirname + '/test/test.md', {
-    toc: true               // Generate toc
+    toc: true,              // Generate toc
+    inlineImage: true       // Parse image into inline dataUri string
 });
 ```
